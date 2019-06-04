@@ -92,7 +92,7 @@ Un « protocol » différent de `up` indique la plupart du temps que l’interfa
 
 ---
 
-**Réponse :**  
+**Réponse :**  Non, les interfaces utilisées sont toutes *up* et fonctionnelles.
 
 ---
 
@@ -129,7 +129,7 @@ Pour votre topologie il est utile de contrôler la connectivité entre :
 
 ---
 
-**Réponse :**  
+**Réponse :**  Oui, tous les pings sont passés. Il a néanmoins fallu demandé à R2 de donner un IP au VPC.
 
 ---
 
