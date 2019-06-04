@@ -129,7 +129,7 @@ Pour votre topologie il est utile de contrôler la connectivité entre :
 
 ---
 
-**Réponse :**  Oui, tous les pings sont passés. Il a néanmoins fallu demandé à R2 de donner un IP au VPC.
+**Réponse :**  Oui, tous les pings sont passés. Il a néanmoins fallu demander à R2 de donner un IP au VPC.
 
 ---
 
