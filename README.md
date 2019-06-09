@@ -152,7 +152,14 @@ Pour déclencher et pratiquer les captures vous allez « pinger » votre routeur
 
 ---
 
-**Screenshots :**  
+**Screenshots :**
+
+**Messages de R1**
+
+![R1# debug ip icmp](images/R1_DebugICMP.png "Messages de R1")
+
+**Capture Wireshark**
+![Capture Wireshark](images/q3.PNG "Capture Wireshark")
 
 ---
 
@@ -233,6 +240,13 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 ---
 
 **Réponse :**  
+
+---
+**Crypto isakmp policy and key for R1:**
+![R1 isakmp policy and key](images/R1_isakmpPolicy.jpg "R1 isakmp policy and key")
+
+**Crypto isakmp policy and key for R2:**
+![R2 isakmp policy and key](images/R2_isakmpPolicy.jpg "R2 isakmp policy and key")
 
 ---
 
@@ -326,6 +340,10 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 ---
 
 **Réponse :**  
+
+---
+**Debug ip icmp de R1:**
+![R1 ip icmp](images/R1_DebugICMP_crypto.jpg "R1 ip icmp")
 
 ---
 
