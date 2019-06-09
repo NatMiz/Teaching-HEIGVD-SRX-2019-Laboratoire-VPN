@@ -230,7 +230,7 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 
 ---
 
-**Réponse :**  
+**Réponse :**  Le routeur r1 ne possède qu'une seule IKE policy contrairement à r2 qui en possède une deuxieme de priorité supérieure. Néanmoins la policy de r1 est commune au deux routeurs.
 
 ---
 
@@ -239,7 +239,7 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 
 ---
 
-**Réponse :**  
+**Réponse :**  On remarque que la clé est partagée entre les deux routeurs
 
 ---
 **Crypto isakmp policy and key for R1:**
@@ -339,11 +339,13 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 
 ---
 
-**Réponse :**  
+**Réponse :**  On remarque dans la capture wireshark les paquets protégés par ipsec, ils sont reconnaissables car ils utilisent le protocle ESP (Encapsulation Security Payload).
 
----
 **Debug ip icmp de R1:**
 ![R1 ip icmp](images/R1_DebugICMP_crypto.jpg "R1 ip icmp")
+
+**Capture sortie R2 vers internet**
+![R2 capture](images/Wireshark_PingCrypto.jpg "R2 capture")
 
 ---
 
@@ -351,7 +353,7 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 
 ---
 
-**Réponse :**  
+**Réponse :**  Les VPN IPsec utilisant IKE utilisent les durées de vie pour contrôler quand un tunnel devra être réétabli. Si le temps spécifié ou la quantité de donnée est dépassée il faut réétablir un tunnel. Les timers *idle* permettent de surveiller l'activité des SA, ce qui permet de supprimer les SA de pairs inactifs.
 
 ---
 
@@ -365,7 +367,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  IKE et ESP
 
 ---
 
@@ -374,7 +376,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  C'est un mode tunnel qui a été configuré.
 
 ---
 
@@ -383,7 +385,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  Le paquets entier (avec l'entete ip original car mode tunnel). A l'aide de l'algorithme AES-192 encapsulé à l'aide de esp.
 
 ---
 
@@ -392,7 +394,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  Le paquet entier ainsi que l'en-tête esp. A l'aide de l'algorithme esp-sha-hmac.
 
 ---
 
@@ -401,6 +403,6 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  L'intégrité du paquet entier ainsi que de l'en-tête esp est garantie par l'algorithme esp-sha-hmac.
 
 ---
